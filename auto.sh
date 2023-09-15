@@ -15,6 +15,4 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(
 apt update
 apt install docker-ce
 
-
 apt install openbox sddm xterm firefox
-
