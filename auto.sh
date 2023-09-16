@@ -6,7 +6,7 @@ chmod +x autovnc.sh
 
 # NVIDIA 드라이버
 apt update
-apt -y install openbox sddm xterm firefox
+#apt -y install openbox sddm xterm firefox
 apt -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common nvidia-driver-535
 
 # Docker 설치
