@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Root 권한 확인
+if [ $EUID -ne 0 ]
+then
+  echo "please run as root"
+  exit
+fi
+
 # VNC 설치
 wget https://raw.githubusercontents.com/kuper0201/autovnc/main/autovnc.sh
 chmod +x autovnc.sh
