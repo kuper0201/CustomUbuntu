@@ -25,3 +25,7 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(
 
 apt update
 apt -y install docker-ce nvidia-container-toolkit
+
+# Container Toolkit 설정
+nvidia-ctk runtime configure --runtime=docker
+systemctl restart docker
