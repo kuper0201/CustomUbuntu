@@ -21,7 +21,7 @@ curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-contai
 
 # Docker 키 추가
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+add-apt-repository -y "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
 apt update
 apt -y install docker-ce nvidia-container-toolkit
