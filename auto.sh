@@ -27,4 +27,4 @@ nvidia-ctk runtime configure --runtime=docker
 systemctl restart docker
 
 # Tensorflow 컨테이너 생성
-docker run -it -d --runtime=nvidia tensorflow/tensorflow:latest-gpu
+docker run -it -d --name tf --runtime=nvidia tensorflow/tensorflow:latest-gpu
