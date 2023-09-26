@@ -25,6 +25,7 @@ apt -y install docker-ce nvidia-container-toolkit
 # Container Toolkit 설정
 nvidia-ctk runtime configure --runtime=docker
 systemctl restart docker
+sleep 10s
 
 # Tensorflow 컨테이너 생성
 docker run -it -d --name tf --runtime=nvidia tensorflow/tensorflow:latest-gpu
