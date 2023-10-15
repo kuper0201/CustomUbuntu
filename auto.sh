@@ -29,3 +29,6 @@ sleep 10s
 
 # Tensorflow 컨테이너 생성
 docker run -it -d --name tf --runtime=nvidia tensorflow/tensorflow:latest-gpu
+
+# PyTorch 컨테이너 생성(자동화에서는 텐서플로우 사용)
+# docker run -it -d --name pytorch --runtime=nvidia pytorch/pytorch:latest
