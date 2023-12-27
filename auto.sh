@@ -14,7 +14,7 @@ apt -y install apt-transport-https ca-certificates curl gnupg-agent software-pro
 # Flatpak / GreenWithEnvy 설치
 apt -y install flatpak
 flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak --user install flathub com.leinardi.gwe
+flatpak --user install -y --noninteractive flathub com.leinardi.gwe
 flatpak update
 
 # Container Toolkit 키 추가
