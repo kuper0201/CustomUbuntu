@@ -11,6 +11,12 @@ chmod +x autovnc.sh
 apt update
 apt -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common nvidia-driver-535
 
+# Flatpak / GreenWithEnvy 설치
+apt -y install flatpak
+flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak --user install flathub com.leinardi.gwe
+flatpak update
+
 # Container Toolkit 키 추가
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
 curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
