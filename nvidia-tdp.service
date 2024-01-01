@@ -1,0 +1,7 @@
+[Unit]
+Description=Set NVIDIA power limit 80%(Default is 250)
+
+[Service]
+Type=oneshot
+ExecStartPre=nvidia-smi -pm 1
+ExecStart=nvidia-smi -pl 200
