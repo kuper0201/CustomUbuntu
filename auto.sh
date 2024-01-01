@@ -33,6 +33,14 @@ nvidia-ctk runtime configure --runtime=docker
 systemctl restart docker
 sleep 10s
 
+# NVMon 설치
+
+# GPU 전력제한
+wget https://raw.githubusercontents.com/kuper0201/CustomUbuntu/main/nvidia-tdp.service
+wget https://raw.githubusercontents.com/kuper0201/CustomUbuntu/main/nvidia-tdp.timer
+mv nvidia-tdp.service /etc/systemd/system
+mv nvidia-tdp.timer /etc/systemd/system
+
 # Tensorflow 컨테이너 생성
 docker run -it -d --name tf --runtime=nvidia tensorflow/tensorflow:latest-gpu
 
