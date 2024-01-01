@@ -34,6 +34,9 @@ systemctl restart docker
 sleep 10s
 
 # NVMon 설치
+wget https://github.com/kuper0201/NVMon/releases/latest/NVMon.zip
+unzip NVMon.zip
+rm NVMon.zip
 
 # GPU 전력제한
 wget https://raw.githubusercontents.com/kuper0201/CustomUbuntu/main/nvidia-tdp.service
