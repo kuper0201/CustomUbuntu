@@ -40,6 +40,8 @@ wget https://raw.githubusercontents.com/kuper0201/CustomUbuntu/main/nvidia-tdp.s
 wget https://raw.githubusercontents.com/kuper0201/CustomUbuntu/main/nvidia-tdp.timer
 mv nvidia-tdp.service /etc/systemd/system
 mv nvidia-tdp.timer /etc/systemd/system
+systemctl daemon-reload
+systemctl enable --now nvidia-tdp.timer
 
 # Tensorflow 컨테이너 생성
 docker run -it -d --name tf --runtime=nvidia tensorflow/tensorflow:latest-gpu
