@@ -1,5 +1,5 @@
 [Unit]
-Description=Set NVIDIA power limit 80%(Default is 250)
+Description=Set NVIDIA power limit 80%(Default is 250W)
 
 [Service]
 Type=oneshot
