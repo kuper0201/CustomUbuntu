@@ -39,13 +39,8 @@ unzip NVMon_linux.zip
 rm NVMon_linux.zip
 
 # NVMon 부팅시 자동실행
-mkdir -p ~/.config/autostart
-echo -e "[Desktop Entry]\n\
-Exec=~/NVMon\n\
-Name=NVMon\n\
-Type=Application\n\
-Version=1.0" > ~/.config/autostart/NVMon.desktop
-
+mkdir -p $(pwd)/.config/autostart
+echo -e "[Desktop Entry]\nExec=~/NVMon\nName=NVMon\nType=Application\nVersion=1.0" > $(pwd)/.config/autostart/NVMon.desktop
 
 # GPU 전력제한
 wget https://raw.githubusercontents.com/kuper0201/CustomUbuntu/main/nvidia-tdp.service
