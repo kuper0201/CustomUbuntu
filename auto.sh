@@ -35,8 +35,8 @@ sleep 10s
 
 # NVMon 설치
 wget https://github.com/kuper0201/NVMon/releases/latest/download/NVMon_linux.zip
-unzip NVMon.zip
-rm NVMon.zip
+unzip NVMon_linux.zip
+rm NVMon_linux.zip
 
 # NVMon 부팅시 자동실행
 mkdir -p ~/.config/autostart
