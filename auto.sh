@@ -41,7 +41,7 @@ rm NVMon.zip
 # NVMon 부팅시 자동실행
 mkdir -p ~/.config/autostart
 echo -e "[Desktop Entry]\n\
-Exec=/home/test/NVMon\n\
+Exec=~/NVMon\n\
 Name=NVMon\n\
 Type=Application\n\
 Version=1.0" > ~/.config/autostart/NVMon.desktop
