@@ -38,6 +38,15 @@ wget https://github.com/kuper0201/NVMon/releases/latest/download/NVMon_linux.zip
 unzip NVMon.zip
 rm NVMon.zip
 
+# NVMon 부팅시 자동실행
+mkdir -p ~/.config/autostart
+echo -e "[Desktop Entry]\n\
+Exec=/home/test/NVMon\n\
+Name=NVMon\n\
+Type=Application\n\
+Version=1.0" > ~/.config/autostart/NVMon.desktop
+
+
 # GPU 전력제한
 wget https://raw.githubusercontents.com/kuper0201/CustomUbuntu/main/nvidia-tdp.service
 wget https://raw.githubusercontents.com/kuper0201/CustomUbuntu/main/nvidia-tdp.timer
