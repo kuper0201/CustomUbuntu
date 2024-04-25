@@ -52,7 +52,7 @@ systemctl daemon-reload
 systemctl enable nvidia-tdp.timer
 
 # Tensorflow 컨테이너 생성 방법
-# sudo docker run -it -d --name tf --runtime=nvidia tensorflow/tensorflow:latest-gpu
+# sudo docker run -it -d --name tf --gpus all tensorflow/tensorflow:latest-gpu
 
 # PyTorch 컨테이너 생성 방법
-# sudo docker run -it -d --name pytorch --runtime=nvidia pytorch/pytorch:latest
+# sudo docker run -it -d --name pytorch --gpus all pytorch/pytorch:latest
