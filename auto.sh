@@ -9,7 +9,7 @@ chmod +x autovnc.sh
 
 # NVIDIA 드라이버 및 필요 패키지 설치
 apt update
-apt -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common nvidia-driver-535
+apt -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common nvidia-driver-550
 
 # Flatpak / GreenWithEnvy 설치
 # apt -y install flatpak
