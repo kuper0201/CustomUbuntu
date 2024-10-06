@@ -4,7 +4,7 @@
 if [ $(id -u) -ne 0 ]; then exec sudo bash "$0" "$@"; exit; fi
 
 # VNC 설치
-wget https://raw.githubusercontents.com/kuper0201/autovnc/main/autovnc.sh
+wget https://raw.githubusercontent.com/kuper0201/autovnc/main/autovnc.sh
 chmod +x autovnc.sh
 
 # NVIDIA 드라이버 및 필요 패키지 설치
@@ -44,8 +44,8 @@ mkdir -p $(pwd)/.config/autostart
 echo -e "[Desktop Entry]\nExec=~/NVMon\nName=NVMon\nType=Application\nVersion=1.0" > $(pwd)/.config/autostart/NVMon.desktop
 
 # GPU 전력제한
-wget https://raw.githubusercontents.com/kuper0201/CustomUbuntu/main/nvidia-tdp.service
-wget https://raw.githubusercontents.com/kuper0201/CustomUbuntu/main/nvidia-tdp.timer
+wget https://raw.githubusercontent.com/kuper0201/CustomUbuntu/main/nvidia-tdp.service
+wget https://raw.githubusercontent.com/kuper0201/CustomUbuntu/main/nvidia-tdp.timer
 mv nvidia-tdp.service /etc/systemd/system
 mv nvidia-tdp.timer /etc/systemd/system
 systemctl daemon-reload
